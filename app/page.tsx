@@ -1,3 +1,4 @@
+import { About } from "@/src/components/sections/About";
 import { Hero } from "@/src/components/sections/Hero";
 
 export default function Home() {
@@ -8,10 +9,8 @@ export default function Home() {
           <Hero />
         </section>
 
-        {/* About - Stats + Summary */}
         <section id="about" className="py-20 bg-muted/30 w-full">
-          {/* <About /> */}
-          <div>about</div>
+          <About />
         </section>
 
         {/* Experience - Timeline */}

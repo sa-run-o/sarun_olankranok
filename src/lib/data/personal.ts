@@ -19,6 +19,18 @@ export const personalInfo: PersonalInfo = {
   summary:
     "Senior Full Stack Developer with 5 years of experience, delivering 15+ production web applications. Expertise in React, TypeScript, Node.js, PostgreSQL, and GCP. Strong collaborator with proven track record in team environments, focusing on building high-quality, maintainable code and user-centric solutions.",
 
+  specialties: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "Firestore",
+    "GCP",
+    "Tailwind CSS",
+    "Git",
+  ],
+
   availability: "Open to opportunities",
 
   resumeUrl: "",

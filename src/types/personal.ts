@@ -12,6 +12,7 @@ export interface PersonalInfo {
   website: string;
   tagline: string;
   summary: string;
+  specialties?: string[]; // List of specialties/expertise areas
   availability: string;
   resumeUrl: string;
 }

@@ -26,7 +26,6 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <ModeToggle />
             {links.map((link) => (
               <a
                 key={link.href}
@@ -43,6 +42,7 @@ export function Navbar() {
             >
               Resume
             </a>
+            <ModeToggle />
           </div>
 
           <button

@@ -1,13 +1,11 @@
+import { Hero } from "@/src/components/sections/Hero";
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-muted font-sans">
       <main className="flex min-h-screen w-full flex-col items-center justify-between py-28 px-16 bg-background sm:items-start">
-        <section
-          id="hero"
-          className="min-h-screen flex items-center justify-center w-full"
-        >
-          {/* <Hero /> */}
-          <div>hero</div>
+        <section id="hero" className="min-h-screen py-20 w-full">
+          <Hero />
         </section>
 
         {/* About - Stats + Summary */}

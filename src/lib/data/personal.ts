@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
   fullName: "Sarun Olankranok",
   firstName: "Sarun",
   lastName: "Olankranok",
-  jobTitle: "Senior Full Stack Developer",
+  jobTitle: "Full Stack Developer",
   yearsOfExperience: "5+",
   location: "Bangkok, Thailand",
   email: "sarun.olan@gmail.com",
@@ -35,21 +35,25 @@ export const socialLinks: SocialLink[] = [
     name: "GitHub",
     url: "https://github.com/sa-run-o",
     icon: "github",
+    value: "sa-run-o",
   },
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/sarun-olankranok-754080342",
     icon: "linkedin",
+    value: "sarun-olankranok",
   },
   {
     name: "Email",
     url: "mailto:sarun.olan@gmail.com",
     icon: "mail",
+    value: "sarun.olan@gmail.com",
   },
   {
     name: "Phone",
     url: "tel:+66948622778",
     icon: "phone",
+    value: "+66948622778",
   },
 ];
 

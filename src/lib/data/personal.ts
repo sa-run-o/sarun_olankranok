@@ -11,7 +11,7 @@ export const personalInfo: PersonalInfo = {
   phone: "+66 66948622778",
   linkedin: "https://www.linkedin.com/in/sarun-olankranok-754080342",
   github: "https://github.com/sa-run-o",
-  website: "https://sarun.dev",
+  website: "",
 
   tagline:
     "Senior Full Stack Developer specializing in React, Node.js, and scalable cloud solutions",
@@ -21,7 +21,7 @@ export const personalInfo: PersonalInfo = {
 
   availability: "Open to opportunities",
 
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "",
 };
 
 export const stats: Stat[] = [

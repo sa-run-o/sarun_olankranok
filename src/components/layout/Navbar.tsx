@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { ModeToggle } from "./ModeToggle";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-stone-100 dark:bg-black/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800 z-50">
+    <nav className="fixed top-0 w-full bg-background dark:bg-black/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800 z-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-lg/4 font-bold">
@@ -25,6 +26,7 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
+            <ModeToggle />
             {links.map((link) => (
               <a
                 key={link.href}

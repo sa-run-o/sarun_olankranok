@@ -17,7 +17,7 @@ export function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background dark:bg-black/80 backdrop-blur-sm border-b border-zinc-200 dark:border-zinc-800 z-50">
+    <nav className="fixed top-0 w-full bg-background backdrop-blur-sm border-b border-border z-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="text-lg/4 font-bold">
@@ -31,7 +31,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
@@ -39,7 +39,7 @@ export function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black text-sm font-medium rounded-lg hover:opacity-80 transition-opacity"
+              className="px-4 py-2 bg-foreground text-primary-foreground text-sm font-medium rounded-lg hover:opacity-80 transition-opacity"
             >
               Resume
             </a>
@@ -61,7 +61,7 @@ export function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-2 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+                className="block py-2 text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
@@ -69,7 +69,7 @@ export function Navbar() {
             <a
               href="/resume.pdf"
               download
-              className="block w-full px-4 py-2 bg-black dark:bg-white text-white dark:text-black text-sm font-medium rounded-lg text-center hover:opacity-80 transition-opacity"
+              className="block w-full px-4 py-2 bg-foreground  text-primary-foreground text-sm font-medium rounded-lg text-center hover:opacity-80 transition-opacity"
             >
               Download Resume
             </a>

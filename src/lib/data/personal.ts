@@ -4,31 +4,34 @@ export const personalInfo: PersonalInfo = {
   fullName: "Sarun Olankranok",
   firstName: "Sarun",
   lastName: "Olankranok",
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Senior Full Stack Developer",
   yearsOfExperience: "5+",
   location: "Bangkok, Thailand",
   email: "sarun.olan@gmail.com",
-  phone: "+66 66948622778",
+  phone: "0948622778",
   linkedin: "https://www.linkedin.com/in/sarun-olankranok-754080342",
   github: "https://github.com/sa-run-o",
   website: "",
 
   tagline:
-    "Senior Full Stack Developer specializing in React, Node.js, and scalable cloud solutions",
+    "Google Maps Platform Specialist | Senior Full Stack Developer | GCP Certified Architect",
 
   summary:
-    "Senior Full Stack Developer with 5 years of experience, delivering 15+ production web applications. Expertise in React, TypeScript, Node.js, PostgreSQL, and GCP. Strong collaborator with proven track record in team environments, focusing on building high-quality, maintainable code and user-centric solutions.",
+    "Senior Full Stack Developer with 5+ years of experience specializing in Google Maps Platform integration and location-based services. GCP Professional Cloud Architect certified. Led development of enterprise mapping solutions serving 15,000+ monthly users. Technical consultant for 3-4 major clients including K-Bank and NECTEC, conducting workshops, training sessions, and implementation guidance. Speaker at Google Maps Platform events. Proven track record in building automation tools that reduced operational workload by 70% (450+ reports monthly).",
 
   specialties: [
+    "Google Maps Platform",
     "React",
-    "Next.js",
     "TypeScript",
+    "Next.js",
     "Node.js",
+    "Python",
     "PostgreSQL",
     "Firestore",
     "GCP",
-    "Tailwind CSS",
-    "Git",
+    "Docker",
+    "Redis",
+    "AI/Chatbot Integration",
   ],
 
   availability: "Open to opportunities",
@@ -38,7 +41,7 @@ export const personalInfo: PersonalInfo = {
 
 export const stats: Stat[] = [
   { label: "Years Experience", value: "5+" },
-  { label: "Projects Completed", value: "15+" },
+  { label: "Projects Completed", value: "10+" },
   { label: "Team Projects", value: "100%" },
 ];
 
@@ -70,14 +73,29 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const keywords: string[] = [
+  "Senior Full Stack Developer",
+  "Google Maps Platform",
+  "Google Maps API",
+  "GCP Professional Cloud Architect",
+  "Location-Based Services",
+  "Technical Consultant",
   "React",
   "TypeScript",
+  "Next.js",
   "Node.js",
+  "Python",
   "PostgreSQL",
   "Firestore",
   "GCP",
-  "Full Stack Developer",
-  "Senior Developer",
+  "Docker",
+  "Redis",
+  "AI Integration",
+  "Chatbot Development",
+  "Automation",
+  "Xero API",
+  "Agile",
+  "Scrum",
+  "CI/CD",
   "Bangkok",
   "Thailand",
 ];

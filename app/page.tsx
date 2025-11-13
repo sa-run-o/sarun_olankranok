@@ -1,4 +1,5 @@
 import { About } from "@/src/components/sections/About";
+import Experience from "@/src/components/sections/Experience";
 import { Hero } from "@/src/components/sections/Hero";
 
 export default function Home() {
@@ -15,20 +16,19 @@ export default function Home() {
 
         {/* Experience - Timeline */}
         <section id="experience" className="py-20 w-full">
-          {/* <Experience /> */}
-          <div>experience</div>
-        </section>
-
-        {/* Skills - Grid */}
-        <section id="skills" className="py-20 bg-muted/30 w-full">
-          {/* <Skills /> */}
-          <div>skills</div>
+          <Experience />
         </section>
 
         {/* Projects - Gallery */}
         <section id="projects" className="py-20 w-full">
           {/* <Projects /> */}
           <div>projects</div>
+        </section>
+
+        {/* Skills - Grid */}
+        <section id="skills" className="py-20 bg-muted/30 w-full">
+          {/* <Skills /> */}
+          <div>skills</div>
         </section>
 
         {/* Contact - Form */}

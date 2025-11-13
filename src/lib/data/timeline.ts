@@ -238,15 +238,63 @@ export const timelineEvents: TimelineEvent[] = [
   },
 ];
 
-// Helper function: Group events by year
+// Helper function: Parse year from date string (e.g., "Nov 2023" -> 2023)
+const parseYear = (dateStr: string): number | null => {
+  const match = dateStr.match(/\d{4}/);
+  return match ? parseInt(match[0]) : null;
+};
+
+// Helper function: Get year range for an event
+const getEventYearRange = (event: TimelineEvent): number[] => {
+  const years: number[] = [];
+
+  if (!event.startDate) {
+    // If no start date, just use the year field
+    return [event.year];
+  }
+
+  const startYear = parseYear(event.startDate);
+  let endYear: number | null = null;
+
+  if (event.endDate && event.endDate !== "Present") {
+    endYear = parseYear(event.endDate);
+  } else if (event.current) {
+    // If current, use current year
+    endYear = new Date().getFullYear();
+  }
+
+  if (!startYear) {
+    return [event.year];
+  }
+
+  if (!endYear) {
+    return [startYear];
+  }
+
+  // Generate array of all years in range
+  for (let year = startYear; year <= endYear; year++) {
+    years.push(year);
+  }
+
+  return years;
+};
+
+// Helper function: Group events by year (including multi-year events)
 export const getEventsByYear = (): Record<number, TimelineEvent[]> => {
   const grouped: Record<number, TimelineEvent[]> = {};
 
   timelineEvents.forEach((event) => {
-    if (!grouped[event.year]) {
-      grouped[event.year] = [];
-    }
-    grouped[event.year].push(event);
+    const yearRange = getEventYearRange(event);
+
+    yearRange.forEach((year) => {
+      if (!grouped[year]) {
+        grouped[year] = [];
+      }
+      // Only add if not already present (avoid duplicates)
+      if (!grouped[year].some((e) => e.id === event.id)) {
+        grouped[year].push(event);
+      }
+    });
   });
 
   // Sort events within each year by month (descending)
@@ -257,9 +305,16 @@ export const getEventsByYear = (): Record<number, TimelineEvent[]> => {
   return grouped;
 };
 
-// Helper function: Get all unique years
+// Helper function: Get all unique years (including all years from multi-year events)
 export const getYears = (): number[] => {
-  const years = [...new Set(timelineEvents.map((e) => e.year))];
+  const yearsSet = new Set<number>();
+
+  timelineEvents.forEach((event) => {
+    const yearRange = getEventYearRange(event);
+    yearRange.forEach((year) => yearsSet.add(year));
+  });
+
+  const years = Array.from(yearsSet);
   return years.sort((a, b) => b - a); // Descending (newest first)
 };
 

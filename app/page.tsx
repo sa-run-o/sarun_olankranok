@@ -1,6 +1,7 @@
 import { About } from "@/src/components/sections/About";
 import Experience from "@/src/components/sections/Experience";
 import { Hero } from "@/src/components/sections/Hero";
+import Projects from "@/src/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -15,18 +16,17 @@ export default function Home() {
         </section>
 
         {/* Experience - Timeline */}
-        <section id="experience" className="py-20 w-full">
+        <section id="experience" className="min-h-screen py-12  w-full">
           <Experience />
         </section>
 
         {/* Projects - Gallery */}
-        <section id="projects" className="py-20 w-full">
-          {/* <Projects /> */}
-          <div>projects</div>
+        <section id="projects" className="py-20 bg-muted/30 w-full">
+          <Projects />
         </section>
 
         {/* Skills - Grid */}
-        <section id="skills" className="py-20 bg-muted/30 w-full">
+        <section id="skills" className="py-20  w-full">
           {/* <Skills /> */}
           <div>skills</div>
         </section>

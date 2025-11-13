@@ -8,8 +8,10 @@ export default function Experience() {
   const years = useMemo(() => getYears().reverse(), []); // Reverse to get ascending order (oldest to newest)
   const eventsByYear = useMemo(() => getEventsByYear(), []);
 
-  // Set initial year to the most recent year
-  const [selectedYear, setSelectedYear] = useState(years[0]);
+  // Set initial year to the most recent year (last in array after reverse)
+  const [selectedYear, setSelectedYear] = useState(
+    years[years.length - 1] || years[0]
+  );
 
   // Get events for selected year
   const currentEvents = eventsByYear[selectedYear] || [];
@@ -167,11 +169,8 @@ export default function Experience() {
   };
 
   return (
-    <section
-      id="experience"
-      className="min-h-screen max-h-screen py-12 px-4 bg-gray-50 dark:bg-gray-900/50 flex flex-col"
-    >
-      <div className="max-w-7xl mx-auto flex-1 flex flex-col overflow-hidden">
+    <div className="min-h-screen max-h-screen flex flex-col w-full">
+      <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <div className="text-center mb-6">
           <h2 className="text-3xl font-bold mb-2 text-gray-900 dark:text-white">
@@ -429,6 +428,6 @@ export default function Experience() {
           }
         }
       `}</style>
-    </section>
+    </div>
   );
 }

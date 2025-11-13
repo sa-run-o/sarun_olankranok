@@ -2,6 +2,8 @@ import { About } from "@/src/components/sections/About";
 import Experience from "@/src/components/sections/Experience";
 import { Hero } from "@/src/components/sections/Hero";
 import Projects from "@/src/components/sections/Projects";
+import Skills from "@/src/components/sections/Skills";
+import Contact from "@/src/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -27,14 +29,12 @@ export default function Home() {
 
         {/* Skills - Grid */}
         <section id="skills" className="py-20  w-full">
-          {/* <Skills /> */}
-          <div>skills</div>
+          <Skills />
         </section>
 
         {/* Contact - Form */}
         <section id="contact" className="py-20 bg-muted/30 w-full">
-          {/* <Contact /> */}
-          <div>contact</div>
+          <Contact />
         </section>
       </main>
     </div>

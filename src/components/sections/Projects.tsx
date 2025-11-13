@@ -62,13 +62,6 @@ export default function Projects() {
                   {project.category === "Automation" && "⚙️"}
                 </div>
               </div>
-              {project.featured && (
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-yellow-500 text-white text-xs font-bold rounded-full shadow-lg">
-                    ⭐ Featured
-                  </span>
-                </div>
-              )}
             </div>
 
             {/* Content */}
@@ -186,42 +179,6 @@ export default function Projects() {
           </p>
         </div>
       )}
-
-      {/* Stats Summary */}
-      <div className="mt-16 grid md:grid-cols-4 gap-6">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
-          <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-            {projects.length}
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            Selected Projects
-          </div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
-          <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-            {projects.filter((p) => p.featured).length}
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            Featured Work
-          </div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
-          <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-            {categories.length - 1}
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            Categories
-          </div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
-          <div className="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">
-            {new Date().getFullYear() - 2020}+
-          </div>
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            Years Building
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

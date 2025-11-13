@@ -11,7 +11,6 @@ export const skillCategories: SkillCategory[] = [
       { name: "Geocoding API", level: 90, years: "5+" },
       { name: "Directions API", level: 90, years: "5+" },
       { name: "Distance Matrix API", level: 85, years: "4+" },
-      { name: "Maps SDK for Android/iOS", level: 75, years: "3+" },
     ],
     highlights: [
       "Built enterprise mapping solutions for banking sector (15K+ monthly users)",

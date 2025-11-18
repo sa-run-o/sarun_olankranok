@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageSquare } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
+import FeedbackModal from "@/src/components/FeedbackModal";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isFeedbackOpen, setIsFeedbackOpen] = useState(false);
 
   const links = [
     { href: "#about", label: "About" },
@@ -35,6 +37,13 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={() => setIsFeedbackOpen(true)}
+              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <MessageSquare size={16} />
+              Feedback
+            </button>
             <a
               href="/resume.pdf"
               download
@@ -66,6 +75,16 @@ export function Navbar() {
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={() => {
+                setIsFeedbackOpen(true);
+                setIsOpen(false);
+              }}
+              className="flex items-center gap-2 py-2 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <MessageSquare size={16} />
+              Feedback
+            </button>
             <a
               href="/resume.pdf"
               download
@@ -76,6 +95,12 @@ export function Navbar() {
           </div>
         )}
       </div>
+
+      {/* Feedback Modal */}
+      <FeedbackModal
+        isOpen={isFeedbackOpen}
+        onClose={() => setIsFeedbackOpen(false)}
+      />
     </nav>
   );
 }
